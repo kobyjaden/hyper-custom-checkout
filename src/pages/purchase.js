@@ -88,7 +88,13 @@ export default function Purchase({ release }) {
                   <label htmlFor="card">Card information</label>
                   <Field className="form-control" name="card" as={CardElement} />
                 </div>
-                <button className="btn btn-primary w-100" type="submit" disabled={isSubmitting}>Pay now</button>
+
+               <div className="form-group">
+                  <label htmlFor="question">What is 2+2?</label>
+                  <Field className="form-control" name="question" placeholder="Answer the question correctly to checkout!" />
+                </div>
+
+                <button className="btn btn-primary w-100" type="submit" disabled={isSubmitting}>Purchase</button>
               </Form>
             )}
           </Formik>
